@@ -22,7 +22,7 @@ export const Search = () => {
           >
             {counter}
           </i>
-          <i class="bx bx-cart text-2xl"></i>
+          <i className="bx bx-cart text-2xl"></i>
         </div>
       </div>
     </form>

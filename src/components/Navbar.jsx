@@ -11,7 +11,7 @@ export const Navbar = () => {
   return (
     <nav className="flex bg-cyan-200 bg-opacity-50 items-center p-4 px-10">
       <div>
-        <h1 className="text-2xl font-semibold"> Exclusive</h1>
+        <h1 className="text-3xl font-semibold"> Exclusive</h1>
       </div>
       <button
         className=" md:hidden text-gray-700 focus:outline-none"
@@ -20,7 +20,7 @@ export const Navbar = () => {
         <i className={`bx ${isOpen ? "bx-x" : "bx-menu"} text-3xl`}></i>
       </button>
 
-      <div className="text-center flex justify-center w-full items-center gap-4 font-semibold">
+      <div className="text-center flex justify-center w-full items-center gap-4 font-semibold text-xl">
         <Link
           className="hover:animate-pulse hover:text-opacity-10 hover:border-b-4 border-indigo-500"
           to="/"

@@ -10,7 +10,7 @@ export const Search = () => {
     <form className="">
       <div className="flex relative items-center cursor-pointer">
         <input
-          className="pl-10 pr-4 py-2 border rounded cursor-pointer"
+          className="pl-12 pr-5 py-2 border rounded cursor-pointer"
           type="text"
           placeholder="What are you loocking for?"
         />{" "}

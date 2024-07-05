@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Search = () => {
+  const [counter, setCounter] = useState(0);
+  const addHandleClick = () => {
+    if (counter >= 100) return;
+    setCounter(counter + 1);
+  };
   return (
     <form className="">
       <div className="flex relative items-center cursor-pointer">
@@ -11,7 +16,12 @@ export const Search = () => {
         />{" "}
         <i className="bx bx-search absolute left-3 text-gray-300"></i>
         <div className="flex p-2 gap-4 items-center">
-          <i className="bx bx-heart text-2xl animate-bounce hover:text-red-400"></i>
+          <i
+            onClick={addHandleClick}
+            className="bx bx-heart text-2xl animate-bounce hover:text-red-400"
+          >
+            {counter}
+          </i>
           <i class="bx bx-cart text-2xl"></i>
         </div>
       </div>

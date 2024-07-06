@@ -1,12 +1,44 @@
-import React from "react";
+import imagen1 from "../images/img1.jpg";
 
 export const Singnup = () => {
   return (
-    <div className="border grid grid-cols-2 w-full justify-center items-center min-h-screen">
-      <div className="border border-sky-400 h-full"></div>
-      <div className="border border-red-400 h-full">
-        <form>
-          <input type="text" placeholder="Ingresa Correo" />
+    <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+      <div className="hidden md:block">
+        <img
+          className="h-full w-full object-cover"
+          src={imagen1}
+          alt="shopping"
+        />
+      </div>
+
+      <div className="flex items-center justify-center p-6">
+        <form className="bg-white shadow-md rounded-lg p-8 max-w-md w-full">
+          <h2 className="text-2xl font-bold text-center mb-6">Crear Cuenta</h2>
+          <label className="block mb-4">
+            <span className="text-gray-700">Correo Electrónico</span>
+            <input
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+              type="email"
+              placeholder="Ingresa tu correo"
+            />
+          </label>
+          <label className="block mb-6">
+            <span className="text-gray-700">Contraseña</span>
+            <input
+              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 p-2"
+              type="password"
+              placeholder="Ingresa tu contraseña"
+            />
+          </label>
+          <button
+            type="submit"
+            className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Registrarse
+          </button>
+          <p className="mt-4 text-center text-gray-600">
+            ¿Ya tienes una cuenta? <a href="#" className="text-indigo-500 hover:text-indigo-600">Inicia sesión</a>
+          </p>
         </form>
       </div>
     </div>

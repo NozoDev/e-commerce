@@ -8,45 +8,60 @@ export const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleLinkClick = () => {
+    setIsShowNav(false);
+  };
   return (
-    <nav className="flex bg-cyan-200 bg-opacity-50 items-center p-4 px-10">
+    <header className="flex bg-cyan-200 bg-opacity-50 items-center justify-between p-4 px-10">
       <div>
         <h1 className="text-3xl font-semibold"> Exclusive</h1>
       </div>
-      <button
-        className=" md:hidden text-gray-700 focus:outline-none"
-        onClick={toggleMenu}
-      >
-        <i className={`bx ${isOpen ? "bx-x" : "bx-menu"} text-3xl`}></i>
-      </button>
 
-      <div className="text-center flex justify-center w-full items-center gap-4 font-semibold text-xl">
+      <i
+        onClick={toggleMenu}
+        className={`text-3xl cursor-pointer md:hidden ${
+          isOpen ? "bx bx-x" : "bx bx-menu-alt-right"
+        }`}
+      ></i>
+
+      <nav
+        className={`text-black ${
+          isOpen ? "top-16 bg-white text-white h-auto text-center" : "-top-full"
+        } w-full grid text-lg gap-4 duration-800 p-2 md:static md:flex md:w-auto absolute left-0`}
+      >
         <Link
+          onClick={handleLinkClick}
           className="hover:animate-pulse hover:text-opacity-10 hover:border-b-4 border-indigo-500"
           to="/"
         >
           Home
         </Link>
         <Link
+          onClick={handleLinkClick}
           className="hover:animate-pulse hover:text-opacity-10 hover:border-b-4 border-indigo-500"
           to="/contact"
         >
           contact
         </Link>
         <Link
+          onClick={handleLinkClick}
           className="hover:animate-pulse hover:text-opacity-10 hover:border-b-4 border-indigo-500"
           to="/about"
         >
           About
         </Link>
         <Link
+          onClick={handleLinkClick}
           className="hover:animate-pulse hover:text-opacity-10 hover:border-b-4 border-indigo-500"
           to="/singup"
         >
           Sign Up
         </Link>
-      </div>
-      <Search />
-    </nav>
+        <div className="flex justify-center items-center flex-col">
+          <Search />
+        </div>
+      </nav>
+    </header>
   );
 };

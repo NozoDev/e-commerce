@@ -15,15 +15,15 @@ export const Search = () => {
           placeholder="What are you loocking for?"
         />{" "}
         <i className="bx bx-search absolute left-3 text-gray-300"></i>
-        <div className="flex p-2 gap-4 items-center">
-          <i
-            onClick={addHandleClick}
-            className="bx bx-heart text-2xl animate-bounce hover:text-red-400"
-          >
-            {counter}
-          </i>
-          <i className="bx bx-cart text-2xl"></i>
-        </div>
+      </div>
+      <div className="flex justify-center p-2 gap-4 items-center">
+        <i className="bx bx-cart text-2xl"></i>
+        <i
+          onClick={addHandleClick}
+          className="bx bx-heart text-2xl animate-bounce hover:text-red-400"
+        >
+          {counter}
+        </i>
       </div>
     </form>
   );
